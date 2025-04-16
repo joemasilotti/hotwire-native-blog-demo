@@ -1,6 +1,6 @@
 # Blog application for Hotwire Native demos
 
-Use this simple Rails blogging site for demoing Hotwire Native apps.
+Use this simple Rails blogging site to demo Hotwire Native apps.
 
 ## Quick start
 

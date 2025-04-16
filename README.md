@@ -2,6 +2,8 @@
 
 Use this simple Rails blogging site to demo Hotwire Native apps.
 
+![Screenshot of the application running in the browser, on the iOS simulator, and on the Android emulator.](/.github/images/screenshot.png)
+
 ## Quick start
 
 1. `bin/setup`

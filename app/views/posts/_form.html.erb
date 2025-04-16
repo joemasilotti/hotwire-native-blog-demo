@@ -1,0 +1,39 @@
+<% if post.errors.any? %>
+  <div class="alert alert-danger" role="alert">
+    <p class="alert-heading fw-semibold mb-1">
+    Please fix these issues to add your post:
+    </p>
+    <ul class="mb-0">
+      <% post.errors.each do |error| %>
+        <li><%= error.full_message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_with model: post, class: "row g-3 mt-1" do |form| %>
+  <div>
+    <%= form.label :title, class: "form-label" %>
+    <%= form.text_field :title, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :body, class: "form-label" %>
+    <%= form.text_area :body, class: "form-control", rows: 8 %>
+  </div>
+
+  <div>
+    <%= form.label :image, class: "form-label" %>
+
+    <% if post.image.attached? %>
+      <%= image_tag post.image, class: "img-thumbnail" %>
+      <%= form.hidden_field :image, value: post.image.signed_id %>
+    <% end %>
+
+    <%= form.file_field :image, accept: "image/jpg,image/jpeg,image/png", class: "form-control mt-2" %>
+  </div>
+
+  <div class="d-grid d-sm-flex justify-content-sm-end mt-4">
+    <%= form.submit "Save", class: "btn btn-primary" %>
+  </div>
+<% end %>

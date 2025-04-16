@@ -1,0 +1,11 @@
+- title: Set native screen titles
+  body: Make your Hotwire Native apps feel more native with dynamic screen titles - all from your Rails codebase.
+  image: native-screen-titles
+
+- title: Hide content with Tailwind CSS
+  body: Get rid of duplicate page titles and make your app feel more native with a Tailwind CSS custom variant.
+  image: hide-content-tailwind-css
+
+- title: Present forms as modals
+  body: Set up a remote path configuration to dynamically render pages as modals, helping isolate tasks and align with native UX patterns.
+  image: forms-as-modals

@@ -1,0 +1,23 @@
+<%= render "shared/header", title: @post.title %>
+
+<div class="container">
+  <% if @post.image.attached? %>
+    <%= image_tag @post.image, class: "img-fluid rounded mt-3" %>
+  <% end %>
+
+  <div class="d-flex align-items-center mt-3">
+    <div class="btn-group w-100">
+      <%= link_to edit_post_path(@post), class: "btn btn-outline-primary" do %>
+        <i class="bi bi-pencil"></i>
+        Edit
+      <% end %>
+
+      <%= link_to post_path(@post), data: {turbo_confirm: "Delete this post?", turbo_method: :delete}, class: "btn btn-outline-danger" do %>
+        <i class="bi bi-trash"></i>
+        Delete
+      <% end %>
+    </div>
+  </div>
+
+  <p class="text-body-secondary mt-3"><%= @post.body %></p>
+</div>

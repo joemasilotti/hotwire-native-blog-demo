@@ -20,4 +20,19 @@
   </div>
 
   <p class="text-body-secondary mt-3"><%= @post.body %></p>
+
+  <h2 class="h5 d-flex justify-content-between align-items-center mt-5">
+    <span>Comments</span>
+    <%= link_to new_post_comment_path(@post), class: "btn btn-outline-primary btn-sm" do %>
+      <i class="bi bi-plus"></i>
+    <% end %>
+  </h2>
 </div>
+
+<% if @post.comments.any? %>
+  <div class="container list-group list-group-flush px-0">
+    <%= render @post.comments %>
+  </div>
+<% else %>
+  <p class="container">No comments, yet.</p>
+<% end %>

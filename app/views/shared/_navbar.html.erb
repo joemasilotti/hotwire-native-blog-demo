@@ -1,0 +1,21 @@
+<nav class="navbar d-hotwire-native-none bg-body-tertiary">
+  <div class="container">
+    <%= link_to "Blog", root_path, class: "navbar-brand" %>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse pb-2" id="navbar">
+      <ul class="navbar-nav me-auto pb-">
+        <li class="nav-item">
+          <%= link_to "Posts", posts_path, class: "nav-link" %>
+        </li>
+
+        <li class="nav-item">
+          <%= link_to "Comments", comments_path, class: "nav-link" %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

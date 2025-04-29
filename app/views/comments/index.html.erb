@@ -1,0 +1,9 @@
+<%= render "shared/header", title: "Comments" %>
+
+<% if @comments.any? %>
+  <div class="container list-group list-group-flush px-0">
+    <%= render @comments %>
+  </div>
+<% else %>
+  <p class="container">No comments, yet.</p>
+<% end %>

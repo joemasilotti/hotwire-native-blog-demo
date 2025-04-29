@@ -1,0 +1,34 @@
+<% if comment.errors.any? %>
+  <div class="alert alert-danger" role="alert">
+    <p class="alert-heading fw-semibold mb-1">
+    Please fix these issues to add your comment:
+    </p>
+    <ul class="mb-0">
+      <% comment.errors.each do |error| %>
+        <li><%= error.full_message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_with model: [comment.post, comment], class: "row g-3 mt-1" do |form| %>
+  <div>
+    <div class="form-label">Post</div>
+    <div class="form-control"><%= comment.post.title %></div>
+    <%= form.hidden_field :post_id, value: comment.post.id %>
+  </div>
+
+  <div>
+    <%= form.label :author, class: "form-label" %>
+    <%= form.text_field :author, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :body, class: "form-label" %>
+    <%= form.text_area :body, class: "form-control", rows: 8 %>
+  </div>
+
+  <div class="d-grid d-sm-flex justify-content-sm-end mt-4">
+    <%= form.submit "Save", class: "btn btn-primary" %>
+  </div>
+<% end %>

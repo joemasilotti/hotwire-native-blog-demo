@@ -11,3 +11,7 @@
 <div class="container d-flex mt-4">
   <%= link_to "Add a post", new_post_path, class: "btn btn-primary flex-grow-1 flex-sm-grow-0" %>
 </div>
+
+<% if user_signed_in? %>
+  <%= link_to "Sign out", session_path, class: "nav-link", "data-turbo-method": "delete" %>
+<% end %>

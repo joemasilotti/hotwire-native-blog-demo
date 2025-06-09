@@ -6,6 +6,14 @@ Rails.application.routes.draw do
     resources :comments, only: %i[new create]
   end
 
+  namespace :hotwire do
+    resources :configuration do
+      collection do
+        get :ios_v1
+        get :android_v1
+      end
+    end
+  end
 
   root "posts#index"
 end

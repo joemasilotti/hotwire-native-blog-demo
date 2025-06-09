@@ -1,0 +1,15 @@
+<% if flash.notice.present? %>
+  <div class="container my-4">
+    <div class="alert alert-primary" role="alert">
+      <%= flash.notice %>
+    </div>
+  </div>
+<% end %>
+
+<% if flash.alert.present? %>
+  <div class="container my-4">
+    <div class="alert alert-danger" role="alert">
+      <%= flash.alert %>
+    </div>
+  </div>
+<% end %>

@@ -2,6 +2,7 @@ source "https://rubygems.org"
 
 gem "rails", "~> 8.0.2"
 
+gem "bcrypt", "~> 3.1.7"
 gem "bootsnap", require: false
 gem "image_processing", "~> 1.2"
 gem "importmap-rails"

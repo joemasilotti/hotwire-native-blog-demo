@@ -15,6 +15,15 @@
         <li class="nav-item">
           <%= link_to "Comments", comments_path, class: "nav-link" %>
         </li>
+
+        <hr class="border-1 border-secondary border-opacity-50">
+        <li class="nav-item">
+          <% if user_signed_in? %>
+            <%= link_to "Sign out", session_path, class: "nav-link", "data-turbo-method": "delete" %>
+          <% else %>
+            <%= link_to "Sign in", new_session_path, class: "nav-link" %>
+          <% end %>
+        </li>
       </ul>
     </div>
   </div>

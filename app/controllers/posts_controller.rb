@@ -43,5 +43,6 @@ class PostsController < ApplicationController
 
   def post_params
     params.expect(post: [:title, :body, :image])
+      .merge(user: current_user)
   end
 end

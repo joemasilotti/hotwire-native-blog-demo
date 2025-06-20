@@ -12,7 +12,13 @@
         Edit
       <% end %>
 
-      <%= link_to post_path(@post), data: {turbo_confirm: "Delete this post?"}, class: "btn btn-outline-danger" do %>
+      <%= link_to post_path(@post), class: "btn btn-outline-danger", data: {
+        turbo_method: :delete,
+        controller: "bridge--confirm",
+        action: "bridge--confirm#show",
+        bridge_title: "Delete this post?",
+        bridge_destructive: true
+      } do %>
         <i class="bi bi-trash"></i>
         Delete
       <% end %>

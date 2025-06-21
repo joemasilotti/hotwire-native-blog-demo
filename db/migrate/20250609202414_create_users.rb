@@ -8,7 +8,5 @@ class CreateUsers < ActiveRecord::Migration[8.0]
     end
 
     add_index :users, :email, unique: true
-
-    add_reference :posts, :user, null: false, foreign_key: true
   end
 end

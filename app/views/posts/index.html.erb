@@ -8,6 +8,7 @@
   <p class="container">No posts, yet.</p>
 <% end %>
 
-<div class="container d-flex mt-4">
+<div class="container d-flex justify-content-between gap-2 mt-4">
+  <%= link_to "Sign out", session_path, class: "btn btn-outline-danger", "data-turbo-method": "delete", "data-turbo-action": "replace" %>
   <%= link_to "Add a post", new_post_path, class: "btn btn-primary flex-grow-1 flex-sm-grow-0" %>
 </div>

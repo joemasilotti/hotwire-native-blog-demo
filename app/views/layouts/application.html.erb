@@ -17,6 +17,7 @@
   </head>
 
   <body>
+    <%= tag.div data: {controller: "bridge--tab-bar", "bridge-show": user_signed_in?} %>
     <%= render "shared/navbar" %>
     <main class="mb-5">
       <%= render "shared/flash" %>

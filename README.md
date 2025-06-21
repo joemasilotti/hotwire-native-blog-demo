@@ -11,9 +11,8 @@ Use this simple Rails blogging site to demo Hotwire Native apps.
 
 ## Requirements
 
-* Ruby 3.4.2
+* Ruby 3.4 (or higher)
 * [SQLite](https://www.sqlite.org/index.html) - `brew install sqlite`
-* [libvips](https://github.com/libvips/libvips) - `brew install vips`
 
 ## Initial setup
 

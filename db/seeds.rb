@@ -12,7 +12,6 @@ posts = YAML.load_file(Rails.root.join("db/seeds/posts/posts.yml"))
 posts.each do |attrs|
   Post.find_or_create_by!(title: attrs["title"]) do |post|
     post.body = attrs["body"]
-    post.user = user
     attach_to_post(attrs["image"], post:)
   end
 end

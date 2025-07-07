@@ -7,7 +7,7 @@ module Authentication
 
   def sign_in(user)
     Current.user = user
-    cookies.encrypted[:user_id] = user.id
+    cookies.permanent.encrypted[:user_id] = user.id
   end
 
   def sign_out(user)

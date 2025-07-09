@@ -1,5 +1,7 @@
 <%= render "shared/header", title: "Posts" %>
 
+<%= link_to "Call me", "tel:8456415111", class: "btn-link" %>
+
 <% if @posts.any? %>
   <div class="container list-group list-group-flush px-0">
     <%= render @posts %>

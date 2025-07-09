@@ -1,5 +1,12 @@
 <%= render "shared/header", title: @post.title %>
 
+<%= button_to "Delete this post?", @post, method: :delete, data: {
+  turbo_method: :delete,
+  controller: "bridge--confirm",
+  "action": "bridge--confirm#confirm",
+  "bridge--confirm-title-value": "Delete this post?"
+}%>
+
 <div class="container">
   <% if @post.image.attached? %>
     <%= image_tag @post.image, class: "img-fluid rounded mt-3" %>
